@@ -34,18 +34,30 @@ function showResults(event) {
   }
   
   var daysAccrued = calculateAccrued(startWeek, endWeek, entitlement)
-  resultAccruedOutput.innerHTML = Math.round(daysAccrued);
   
+  if (Number.isNaN(daysAccrued)) {
+    resultAccruedOutput.innerHTML = "Fill in the boxes you wally"
+  } 
+  
+  if (joiningRadio.checked) {
+    resultAccruedOutput.innerHTML = Math.round(daysAccrued) + " days remaining for the year";
+  } else {
+    resultAccruedOutput.innerHTML = Math.round(daysAccrued) + " days accrued"; 
+  }
+ 
   var daysRemaining = daysAccrued - taken;
-  resultRemainingOutput.innerHTML = Math.round(daysRemaining);
-  resultAccruedDiv.style.display = "block";
-  
+if (Number.isNaN(daysRemaining)) {
+    resultAccruedOutput.innerHTML = "Fill in the boxes you wally"
+    resultRemainingOutput.innerHTML = ""
+  } else {
+  resultRemainingOutput.innerHTML = Math.round(daysRemaining) + " days remaining";
+  }
+  resultAccruedDiv.style.display = "block";  
   if (leavingRadio.checked || joiningLeavingRadio.checked) {
     resultRemainingDiv.style.display = "block";
   }
   
 }
-
 
 joiningRadio.addEventListener("click", function(){
   endWeekDiv.style.display = "none";
