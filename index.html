@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Holiday Calculator v2</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  
+<div class="outerDiv">
+  <h3>The Holidator</h3>
+  <form>   
+    
+    <section>
+<div>
+  <input type="radio" id="joining" name="select" value="1" checked>
+  <label class="radioLabel" for="joining">
+    <h4>Joining</h4>
+  </label>
+</div>
+<div>
+  <input type="radio" id="leaving" name="select" value="2">
+  <label class="radioLabel" for="leaving">
+    <h4>Leaving</h4>
+  </label>
+</div>
+<div>
+  <input type="radio" id="joiningLeaving" name="select" value="3">
+  <label class="radioLabel" for="joiningLeaving">
+    <h4>Joining & leaving</h4>
+  </label>
+</div>
+</section>
+    
+     
+    
+    
+   <!-- <div class="standardDiv radioDiv">
+      <input type="radio" class="radioButton" id="joining" name="joiningOptions" value="joining"/>
+      <label for="joining" class="radioLabel">Joining</label>
+      
+      <input type="radio" class="radioButton" id="leaving" name="joiningOptions" value="leaving"/>
+      <label class="radioLabel" for="leaving">Leaving</label>
+  
+      <input type="radio" class="radioButton" id="joiningLeaving" name="joiningOptions" value="joiningLeaving"/>
+      <label class="radioLabel" for="joiningLeaving">Joining and leaving this year</label>
+    </div> 
+    
+    -->
+    
+    
+    <div class="standardDiv">
+      <label for="entitlement">Entitlement</label>
+      <input type="number" id="entitlement" value="31"/>  
+    </div>
+    <div class="standardDiv" id="startWeekDiv">
+      <label for="startDate">Start date</label>
+      <input type="date" id="startDate"/>
+    </div>
+      <div class="standardDiv" id="endWeekDiv">
+      <label for="endDate">Last day</label>
+      <input type="date" id="endDate"/>
+    </div>
+    <div class="standardDiv" id="daysTakenDiv">
+      <label for="daysTaken">Days taken up to end date</label>
+      <input type="number" id="daysTaken" value="0"/>
+    </div>
+    <div class="standardDiv">
+     <button id="calculateButton">Calculate</button>
+    </div>
+  </form>
+  <div class="resultsDiv">
+  <div class="standardDiv" id="resultAccruedDiv">
+    <span id="resultAccrued">0</span>
+    <span>days accrued</span>
+  </div>
+  <div class="standardDiv" id="resultRemainingDiv">
+    <span id="resultRemaining">0</span>
+    <span>days remaining</span>
+    </div>
+  </div> 
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
